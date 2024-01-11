@@ -1,6 +1,6 @@
 # aiken-merkle-tree
 
-# Acknowledgments
+## Acknowledgments
 
 This library takes the Merkle Tree code from the `trees` project, developed and maintained by `aiken-lang`.
 
