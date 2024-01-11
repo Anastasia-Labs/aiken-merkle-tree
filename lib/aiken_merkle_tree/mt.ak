@@ -1,13 +1,13 @@
-//// This code is sourced from https://github.com/aiken-lang/trees/blob/main/lib/aiken/trees/mt.ak
-////
-//// A purely functional implementation of MerkleTrees that is suitable for
-//// usage on-chain. Note, however, that the construction of 'MerkleTree' and
-//// membership proofs are still expected to happen *off-chain* while only the
-//// proof verification should be done on-chain.
-////
-//// This implementation uses exclusively SHA-256 as a hashing algorithm.
-////
-//// The code ported to Aiken from [Hydra](https://github.com/input-output-hk/hydra/blob/master/plutus-merkle-tree/src/Plutus/MerkleTree.hs)
+// This code is sourced from https://github.com/aiken-lang/trees/blob/main/lib/aiken/trees/mt.ak
+//
+// A purely functional implementation of MerkleTrees that is suitable for
+// usage on-chain. Note, however, that the construction of 'MerkleTree' and
+// membership proofs are still expected to happen *off-chain* while only the
+// proof verification should be done on-chain.
+//
+// This implementation uses exclusively SHA-256 as a hashing algorithm.
+//
+// The code ported to Aiken from [Hydra](https://github.com/input-output-hk/hydra/blob/master/plutus-merkle-tree/src/Plutus/MerkleTree.hs)
 
 use aiken/bytearray
 use aiken/hash.{Hash, Sha2_256, sha2_256}
