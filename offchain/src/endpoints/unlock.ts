@@ -25,10 +25,11 @@ export async function unlock(
     "Data.to<MyRedeemer>(redeemer, MyRedeemer) :>> ",
     Data.to<MyRedeemer>(redeemer, MyRedeemer)
   );
+  console.log("Data.void() :>> ", Data.void());
   try {
     const tx = await lucid
       .newTx()
-      .collectFrom(utxos, Data.to<MyRedeemer>(redeemer, MyRedeemer))
+      .collectFrom(utxos, Data.void())
       .attachSpendingValidator(validator)
       .complete();
     return { type: "ok", data: tx };

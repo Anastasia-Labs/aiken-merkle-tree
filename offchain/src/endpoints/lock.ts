@@ -24,11 +24,7 @@ export async function lock(
   try {
     const tx = await lucid
       .newTx()
-      .payToContract(
-        contractAddress,
-        { inline: Data.to<MyDatum>(datum, MyDatum) },
-        { lovelace }
-      )
+      .payToContract(contractAddress, { inline: Data.void() }, { lovelace })
       .complete();
     return { type: "ok", data: tx };
   } catch (error) {

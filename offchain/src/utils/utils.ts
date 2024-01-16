@@ -106,16 +106,3 @@ export function convertProof(proof: MerkleTreeProof) {
   }
   return result;
 }
-
-121(
-  [
-    [122(
-      [h'8E8A6CB359BB83F141498D96A80D7A9CE4C5558C115660820E0F2AC13555D934']
-    )]
-    , h'61'
-  ]
-)
-
-121(
-  [h'16CE3DFE44B065B8B9A940C25C424C064DE4DB1CC914B5970B2D56B6DD18522A']
-)

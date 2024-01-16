@@ -10,95 +10,30 @@
     {
       "title": "sample.spend_validator",
       "datum": {
-        "title": "datum",
+        "title": "_datum",
         "schema": {
-          "$ref": "#/definitions/sample~1MyDatum"
+          "$ref": "#/definitions/Void"
         }
       },
       "redeemer": {
-        "title": "redeemer",
+        "title": "_r",
         "schema": {
-          "$ref": "#/definitions/sample~1MyRedeemer"
+          "$ref": "#/definitions/Void"
         }
       },
-      "compiledCode": "590174010000323232323232323222232325333008323232323232333332322222332232333001001003002222533301c00113371e0120042646464a66603866e1d200000113330060063300d375c6040603400600a004266600c00c6601a00a6eb8c080c06800c008c068008c07c008c074004c018c00400c00888c00ccdc500100091b920010050010032001375c602200260220046eb0c03c004c020018dd7180680098030028a4c2c64a66601066e1d2000001132323232533300f3011002132498c8cc004004010894ccc044004526132330030033014002323253330103370e900000089919299980a980b8010a4c2c6eb8c054004c03800854ccc040cdc3a400400226464a66602a602e0042930b1bae3015001300e00216300e001301200116375c601e002601e0046eb0c034004c01801058c01800cc94ccc01ccdc3a400000226464a666018601c0042930b1bae300c0013005004163005003230053754002460066ea80055cd2ab9d5573caae7d5d0aba21",
-      "hash": "51f942407dea049abf875674c1787d787cdd619e76a298ff2611ea61"
+      "compiledCode": "500100003222253330044a22930b2b9a01",
+      "hash": "90592520b329fe08f0e93946ecd405e49b7480795e27cb618f002d88"
     }
   ],
   "definitions": {
-    "ByteArray": {
-      "dataType": "bytes"
-    },
-    "List$aiken_merkle_tree/mt/ProofItem$ByteArray": {
-      "dataType": "list",
-      "items": {
-        "$ref": "#/definitions/aiken_merkle_tree~1mt~1ProofItem$ByteArray"
-      }
-    },
-    "aiken_merkle_tree/mt/ProofItem$ByteArray": {
-      "title": "ProofItem",
-      "description": "An opaque proof element.",
+    "Void": {
+      "title": "Unit",
+      "description": "The nullary constructor.",
       "anyOf": [
         {
-          "title": "Left",
           "dataType": "constructor",
           "index": 0,
-          "fields": [
-            {
-              "$ref": "#/definitions/aiken_merkle_tree~1mt~1Root"
-            }
-          ]
-        },
-        {
-          "title": "Right",
-          "dataType": "constructor",
-          "index": 1,
-          "fields": [
-            {
-              "$ref": "#/definitions/aiken_merkle_tree~1mt~1Root"
-            }
-          ]
-        }
-      ]
-    },
-    "aiken_merkle_tree/mt/Root": {
-      "title": "Root",
-      "description": "An opaque root. Use [to_hash](#to_hash) and\n [from_hash](#from_hash) to convert back-and-forth between this and\n classic hashes. This type exists mainly to disambiguate between standard\n value (leaf) hash from tree hashes.",
-      "dataType": "bytes"
-    },
-    "sample/MyDatum": {
-      "title": "MyDatum",
-      "anyOf": [
-        {
-          "title": "MyDatum",
-          "dataType": "constructor",
-          "index": 0,
-          "fields": [
-            {
-              "title": "merkle_root",
-              "$ref": "#/definitions/aiken_merkle_tree~1mt~1Root"
-            }
-          ]
-        }
-      ]
-    },
-    "sample/MyRedeemer": {
-      "title": "MyRedeemer",
-      "anyOf": [
-        {
-          "title": "MyRedeemer",
-          "dataType": "constructor",
-          "index": 0,
-          "fields": [
-            {
-              "title": "my_proof",
-              "$ref": "#/definitions/List$aiken_merkle_tree~1mt~1ProofItem$ByteArray"
-            },
-            {
-              "title": "user_data",
-              "$ref": "#/definitions/ByteArray"
-            }
-          ]
+          "fields": []
         }
       ]
     }

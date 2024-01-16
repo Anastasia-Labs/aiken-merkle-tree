@@ -63,6 +63,7 @@ test<LucidContext>("Test - Lock Tokens, Unlock Tokens", async ({
     script: toHex(cbor.encode(fromHex(plutus.validators[0].compiledCode))),
   };
 
+  console.log("validator :>> ", validator);
   const data = [Buffer.from("a"), Buffer.from("b"), Buffer.from("c")];
   const merkleTree = new MerkleTree(data);
   const rootHash = merkleTree.rootHash();
