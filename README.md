@@ -136,7 +136,7 @@ aiken build
 
 # Sample validator
 
-For a complete example, including tests and further explanations, reger to the provided sample validator: [MerkleTreeSpec.hs](validators/sample.ak).
+For a complete example, including tests and further explanations, reger to the provided sample validator: [sample.ak](validators/sample.ak).
 
 # Case study
 
